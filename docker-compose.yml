@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  cpp-cmake-tc_task:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: ./tc_task
+#     command: valgrind --leak-check=full --show-leak-kinds=all ./tc_task
+#     stdin_open: true
+#     tty: true
+
+# docker-compose up --build 
+# docker-compose up --build && docker-compose down --volumes
